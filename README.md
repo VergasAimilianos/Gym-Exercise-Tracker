@@ -1,16 +1,16 @@
-# 🏋️ Gym Exercise Tracker
+# Gym Exercise Tracker
 
 A full-stack CRUD web application for tracking gym exercises and weights. Built with a **Spring Boot** REST API backend and a **React + TypeScript** frontend.
 
 ---
 
-## 📸 Overview
+## Overview
 
 The app lets users log their gym workouts by storing exercise names and the corresponding weight lifted. Each record can be created, viewed, updated, and deleted directly from the UI.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 | Technology | Version | Purpose |
@@ -34,7 +34,7 @@ The app lets users log their gym workouts by storing exercise names and the corr
 
 ---
 
-## ✨ Features
+## Features
 
 - **Create** a new gym record with an exercise name and weight
 - **Read** all existing gym records in real time
@@ -45,7 +45,7 @@ The app lets users log their gym workouts by storing exercise names and the corr
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── backend/
@@ -82,7 +82,7 @@ The app lets users log their gym workouts by storing exercise names and the corr
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -115,7 +115,7 @@ spring:
       ddl-auto: create-drop
 ```
 
-> ⚠️ `ddl-auto: create-drop` will **drop and recreate** the schema on every restart. Change to `update` or `validate` to persist data between runs.
+> `ddl-auto: create-drop` will **drop and recreate** the schema on every restart. Change to `update` or `validate` to persist data between runs.
 
 ---
 
@@ -142,7 +142,7 @@ The app will be available at `http://localhost:4200` (Nx default).
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 Base URL: `http://localhost:8080`
 
@@ -174,7 +174,7 @@ Base URL: `http://localhost:8080`
 
 ---
 
-## 🗄️ Data Model
+## Data Model
 
 **GymRecord**
 
@@ -186,7 +186,7 @@ Base URL: `http://localhost:8080`
 
 ---
 
-## 📬 Error Handling
+## Error Handling
 
 The backend uses a global `RestExceptionHandler` that catches `AppException` instances and returns structured error responses:
 
