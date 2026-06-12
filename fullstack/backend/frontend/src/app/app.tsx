@@ -11,11 +11,13 @@ import CreateContentBox from '../content-box/CreateContentBox';
 import DeleteContentBox from '../content-box/DeleteContentBox';
 import UpdateContentBox from '../content-box/UpdateContentBox';
 
+const API_BASE_URL = "https://gym-exercise-tracker.onrender.com";
+
 export function App() {
     const [records, setRecords] = React.useState<GymRecord[]>([]);
 
     React.useEffect(() => {
-        fetch("http://localhost:8080/gym/records",{
+        fetch(`${API_BASE_URL}/gym/records`,{
             method: "GET"
             }).then(response => {
                 if (response.status == 200){
@@ -30,7 +32,7 @@ export function App() {
         }, []);
 
     const handleCreateSubmit = (exercise: string, weight: number ) => {
-        fetch("http://localhost:8080/gym/records",{
+        fetch(`${API_BASE_URL}/gym/records`,{
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify({exercise: exercise, weight: weight})
@@ -47,7 +49,7 @@ export function App() {
         };
 
     const handleDeleteSubmit = (id: number ) => {
-        fetch(`http://localhost:8080/gym/records/${id}`,{
+        fetch(`${API_BASE_URL}/gym/records/${id}`,{
             method: "DELETE",
             }).then(response => {
                 if(response.status == 200){
@@ -63,7 +65,7 @@ export function App() {
 
 
     const handleUpdateSubmit = (recordToUpdate: GymRecord)=> {
-        fetch(`http://localhost:8080/gym/records/${recordToUpdate.id}`,{
+        fetch(`${API_BASE_URL}/gym/records/${recordToUpdate.id}`,{
          method: "PUT",
          headers: {"content-type": "application/json"},
          body: JSON.stringify({exercise: recordToUpdate.exercise, weight: recordToUpdate.weight})
