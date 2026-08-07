@@ -10,6 +10,9 @@ The app lets users log their gym workouts by storing exercise names and the corr
 
 ---
 
+- **Frontend:** [https://gym-tracker-frontend-5kdd.onrender.com](https://gym-tracker-frontend-5kdd.onrender.com)
+
+---
 ## Tech Stack
 
 ### Backend
